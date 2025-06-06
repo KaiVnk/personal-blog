@@ -1,103 +1,76 @@
 import Image from "next/image";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import PostCard from "./components/post-card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <Header />
+      
+      <section className="pt-[80px] md:pt-0">
+        <div className="max-w-[1250px] mx-auto">
+          <div className="min-h-screen grid grid-cols-1 grid-rows-2 gap-0 md:grid-cols-2 md:grid-rows-1">
+            <div className="flex justify-center items-center">
+              <div className="h-full max-h-[450px] overflow-hidden bg-black md:rounded-[15px]">
+                <Image 
+                  src="/frontpage.jpg" 
+                  alt="Frontpage" 
+                  className="w-full h-full object-cover" 
+                  width={4500}
+                  height={3052}
+                />
+              </div>
+            </div>
+            <div className="flex justify-center items-center p-[15px]">
+              <div className="h-full max-h-[375px] bg-white flex flex-col justify-center items-center text-center shadow-[5px_5px_30px_0px_rgba(0,_0,_0,_0.1)] rounded-[15px] p-[15px] mt-[-100px] md:mt-0 md:ml-[-100px] uppercase">
+                <h2 className="text-[#222]">APRENDE A APRENDER Y DOMINA EL ARTE DEL APRENDIZAJE</h2>
+                <h1 className="text-3xl font-semibold">Conviertete en una persona Multipotencial</h1>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="text-center mb-[25px]">
+            <h2 className="text-4xl">Tendencias de IntelliMind</h2>
+          </div>
+          <div className="max-w-[950px] mx-auto grid grid-cols-1 grid-rows-1 justify-center justify-items-center content-start gap-[50px] md:grid-cols-2 md:grid-rows-1">
+            <PostCard
+              imageSrc="/image-post/publication-1.jpg"
+              imageAlt="Publication"
+              slug="el-arte-del-aprendizaje"
+              date="26 de Mayo, 2025"
+              title="El arte del aprendizaje"
+              content="El arte del aprendizaje consiste en identificar y dominar los principios fundamentales de cualquier disciplina. Al enfocarte solo en lo esencial, puedes avanzar más rápido, vivir una vida multipotencial y convertirte en un verdadero maestro del aprendizaje."
+            />
+            <PostCard
+              imageSrc="/image-post/publication-1.jpg"
+              imageAlt="Publication"
+              slug="el-arte-de-la-maestria"
+              date="26 de Mayo, 2025"
+              title="El arte de la maestría"
+              content="Convertirse en maestro no es cuestión de talento, sino de intención, enfoque y repetición deliberada. La maestría es el arte de profundizar tanto en lo esencial que tu habilidad se convierte en sabiduría práctica y poder creativo."
+            />
+            <PostCard
+              imageSrc="/image-post/publication-1.jpg"
+              imageAlt="Publication"
+              slug="el-arte-de-la-multidisciplina"
+              date="26 de Mayo, 2025"
+              title="El arte de la multidisciplina"
+              content="La verdadera ventaja no está en saber de todo, sino en unir saberes distintos para crear algo único. Ser multidisciplinario es aprender a pensar sin fronteras, vivir con más recursos internos y construir una mente adaptable al mundo real."
+            />
+          </div>
+          <div className="flex justify-center items-center mt-[25px]">
+            <Link href="/blog" className="py-[10px] px-[30px] bg-black text-white uppercase border-[1px] border-transparent md:hover:bg-white md:hover:text-black md:hover:border-black">Leer más</Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
   );
 }
