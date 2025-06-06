@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
 
@@ -25,7 +26,13 @@ export default function about() {
                             <p className="paragraph">Nuestro objetivo es formar profesionales que puedan aplicar sus conocimientos en situaciones reales, y que puedan adaptarse a cualquier cambio que se presente en el mundo, junto con adquirir la habilidad más importante, aprender a aprender.</p>
                         </div>
                         <div className="px-[15px] rounded-[15px] overflow-hidden">
-                            <img src="/404-not-found.png" alt="About" className="w-full h-full object-cover rounded-[15px]" />
+                            <Image 
+                                src="/404-not-found.png" 
+                                alt="About" 
+                                className="w-full h-full object-cover rounded-[15px]" 
+                                width={1108}
+                                height={730}
+                            />
                         </div>
                     </div>
                 </div>

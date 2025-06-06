@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Children } from "react";
 
 interface PostTemplateProps {
     title: string;
