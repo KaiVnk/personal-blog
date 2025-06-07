@@ -14,7 +14,7 @@ export default function Blog() {
             </section>
             <section>
                 <div className="container">
-                    <div className="max-w-[950px] mx-auto grid grid-cols-1 grid-rows-1 justify-center justify-items-center content-start gap-[50px] md:grid-cols-2 md:grid-rows-1">
+                    <div className="max-w-[950px] mx-auto grid grid-cols-1 grid-rows-1 justify-center justify-items-center content-start gap-[50px] lg:grid-cols-2 lg:grid-rows-1">
                         <PostCard
                           imageSrc="/image-post/publication-1.jpg"
                           imageAlt="Publication"

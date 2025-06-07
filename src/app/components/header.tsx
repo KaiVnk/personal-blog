@@ -12,7 +12,7 @@ export default function Header() {
   
     return (
         <>
-            <header className="fixed h-[80px] w-full left-0 top-0 bg-white shadow-[5px_0px_30px_0px_rgba(0,_0,_0,_0.1)]">
+            <header className="fixed h-[80px] w-full left-0 top-0 bg-white">
               <div className="max-w-[1250px] mx-auto p-[15px] flex justify-between items-center">
                 <Link href="/">
                   <Image 
@@ -24,17 +24,17 @@ export default function Header() {
                   />
                 </Link>
                 <div className="hidden md:block">
-                  <ul className="inline-flex justify-center items-center gap-[25px] uppercase">
+                  <ul className="inline-flex justify-center items-center gap-[30px] uppercase">
                     <li className="border-b-[1px] border-transparent md:hover:border-[#111]"><Link href="/">Inicio</Link></li>
-                    <li className="border-b-[1px] border-transparent md:hover:border-[#111]"><Link href="/about">Acerca de</Link></li>
                     <li className="border-b-[1px] border-transparent md:hover:border-[#111]"><Link href="/blog">Blog</Link></li>
+                    <li className="border-b-[1px] border-transparent md:hover:border-[#111]"><Link href="/about">Acerca de</Link></li>
                   </ul>
                 </div>
                 <div className={`${openNavBar ? "flex" : "hidden"} w-full h-[250px] absolute left-0 top-[100%] bg-[rgba(0,0,0,0.9)] text-white text-center justify-center items-center uppercase md:hidden`}>
                   <ul>
                     <li className="my-[15px]"><Link href="/">Inicio</Link></li>
-                    <li className="my-[15px]"><Link href="/about">Acerca de</Link></li>
                     <li className="my-[15px]"><Link href="/blog">Blog</Link></li>
+                    <li className="my-[15px]"><Link href="/about">Acerca de</Link></li>
                   </ul>
                 </div>
                 <div className="md:hidden">

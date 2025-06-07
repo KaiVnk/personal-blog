@@ -46,7 +46,7 @@ export default function PostTemplate({
                         </div>
                         <div className="bg-[#f8f8f8] rounded-[15px] p-[25px] my-[50px]">
                             <p className="text-lg font-semibold mb-[10px] uppercase">En esta publicación aprenderás</p>
-                            <ol className="list-decimal list-inside text-[#222] pl-[25px]">
+                            <ol className="list-decimal list-inside text-[#222] pl-[15px] md:pl-[25px]">
                                 {learningPoints.map((point, index) => (
                                     <li key={index}>{point}</li>
                                 ))}

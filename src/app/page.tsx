@@ -11,9 +11,9 @@ export default function Home() {
       
       <section className="pt-[80px] md:pt-0">
         <div className="max-w-[1250px] mx-auto">
-          <div className="min-h-screen grid grid-cols-1 grid-rows-2 gap-0 md:grid-cols-2 md:grid-rows-1">
+          <div className="min-h-screen grid grid-cols-1 grid-rows-2 gap-0 lg:grid-cols-2 lg:grid-rows-1">
             <div className="flex justify-center items-center">
-              <div className="h-full max-h-[450px] overflow-hidden bg-black md:rounded-[15px]">
+              <div className="h-full lg:max-h-[450px] overflow-hidden bg-[#f8f8f8]">
                 <Image 
                   src="/frontpage.jpg" 
                   alt="Frontpage" 
@@ -23,10 +23,10 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div className="flex justify-center items-center p-[15px]">
-              <div className="h-full max-h-[375px] bg-white flex flex-col justify-center items-center text-center shadow-[5px_5px_30px_0px_rgba(0,_0,_0,_0.1)] rounded-[15px] p-[15px] mt-[-100px] md:mt-0 md:ml-[-100px] uppercase">
+            <div className="flex justify-center items-start p-[15px] lg:items-center">
+              <div className="h-full max-h-[350px] bg-white flex flex-col justify-center items-center text-center shadow-[5px_5px_30px_0px_rgba(0,_0,_0,_0.1)] rounded-[15px] p-[25px] mt-[-100px] uppercase lg:mt-0 lg:ml-[-100px] lg:max-h-[375px]">
                 <h2 className="text-[#222]">APRENDE A APRENDER Y DOMINA EL ARTE DEL APRENDIZAJE</h2>
-                <h1 className="text-3xl font-semibold">Conviertete en una persona Multipotencial</h1>
+                <h1 className="text-2xl md:text-3xl font-semibold">Conviertete en una persona Multipotencial</h1>
               </div>
             </div>
           </div>
@@ -38,7 +38,7 @@ export default function Home() {
           <div className="text-center mb-[25px]">
             <h2 className="text-4xl">Tendencias de IntelliMind</h2>
           </div>
-          <div className="max-w-[950px] mx-auto grid grid-cols-1 grid-rows-1 justify-center justify-items-center content-start gap-[50px] md:grid-cols-2 md:grid-rows-1">
+          <div className="max-w-[950px] mx-auto grid grid-cols-1 grid-rows-1 justify-center justify-items-center content-start gap-[50px] lg:grid-cols-2 lg:grid-rows-1">
             <PostCard
               imageSrc="/image-post/publication-1.jpg"
               imageAlt="Publication"
@@ -64,8 +64,8 @@ export default function Home() {
               content="La verdadera ventaja no está en saber de todo, sino en unir saberes distintos para crear algo único. Ser multidisciplinario es aprender a pensar sin fronteras, vivir con más recursos internos y construir una mente adaptable al mundo real."
             />
           </div>
-          <div className="flex justify-center items-center mt-[25px]">
-            <Link href="/blog" className="py-[10px] px-[30px] bg-black text-white uppercase border-[1px] border-transparent md:hover:bg-white md:hover:text-black md:hover:border-black">Leer más</Link>
+          <div className="flex justify-center items-center mt-[50px]">
+            <Link href="/blog" className="py-[10px] px-[30px] bg-black text-white uppercase border-[1px] border-transparent transition-all duration-300 md:hover:bg-white md:hover:text-black md:hover:border-black">Leer más</Link>
           </div>
         </div>
       </section>

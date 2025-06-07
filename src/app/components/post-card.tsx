@@ -19,7 +19,7 @@ export default function PostCard({
     slug 
 }: PostCardProps) {
     return (
-        <div className="min-w-[400px] w-[425px] max-w-[425px] text-[#222] rounded-[15px] overflow-hidden">
+        <div className="min-w-[350px] max-w-[425px] text-[#222] rounded-[15px] overflow-hidden">
             <Link href={`/blog/${slug}`} className="bg-[#eee]">
                 <Image 
                     src={imageSrc}
@@ -28,7 +28,7 @@ export default function PostCard({
                     height={3080}
                 />
             </Link>
-            <div className="p-[15px]">
+            <div className="pt-[10px]">
                 <p>{date}</p>
                 <h3 className="text-xl text-black uppercase mt-[5px] font-semibold">{title}</h3>
                 <p>&quot;{content}&quot;</p>
